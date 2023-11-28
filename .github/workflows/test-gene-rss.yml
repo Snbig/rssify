@@ -10,7 +10,7 @@ jobs:
     name: A job to test RSS generation
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Test Rssify
       uses: ./
       with:
@@ -21,4 +21,3 @@ jobs:
         item-description-css: .cover-text
         item-date-css: .post-time
         item-date-format: '%Y-%m-%d'
-        token: ${{ secrets.rssify }}
