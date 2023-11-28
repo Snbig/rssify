@@ -2,7 +2,7 @@ name: Test RSS generation
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Run every 10 minutes
+    - cron: '*/10 * * * *'  # Run every 10 minutes
 
 jobs:
   gene-rss:
