@@ -1,6 +1,8 @@
 name: Test RSS generation
 
-on: [push]
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # Run every 10 minutes
 
 jobs:
   gene-rss:
@@ -19,3 +21,4 @@ jobs:
         item-description-css: .cover-text
         item-date-css: .post-time
         item-date-format: '%Y-%m-%d'
+
