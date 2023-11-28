@@ -17,7 +17,7 @@ jobs:
         title: Test Rssify
         url: https://cafebazaar.ir/app/ir.tejaratbank.tata.mobile.android.tejarat
         item-title-css: .AppName
-        #item-url-css: .post-title > a
+        item-url-css: .AppInstallBtn
         item-description-css: .InfoCubes
         #item-date-css: .post-time
         #item-date-format: '%Y-%m-%d'
