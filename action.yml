@@ -84,7 +84,6 @@ runs:
             git push origin ${GITHUB_REF##*/}
         fi
       shell: bash
-
 branding:
   icon: 'rss'
   color: 'green'
