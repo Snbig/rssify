@@ -15,9 +15,9 @@ jobs:
       uses: ./
       with:
         title: Test Rssify
-        url: https://gitx.io/
-        item-title-css: .post-title > a
-        item-url-css: .post-title > a
-        item-description-css: .cover-text
-        item-date-css: .post-time
-        item-date-format: '%Y-%m-%d'
+        url: https://cafebazaar.ir/app/ir.tejaratbank.tata.mobile.android.tejarat
+        item-title-css: .AppName
+        #item-url-css: .post-title > a
+        item-description-css: .InfoCubes
+        #item-date-css: .post-time
+        #item-date-format: '%Y-%m-%d'
