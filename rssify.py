@@ -49,6 +49,7 @@ if version_css:
 ausers = []
 if ausers_css:
     ausers = soup.select(ausers_css)
+print(ausers)
 
 ldates = []
 if ldate_css:
