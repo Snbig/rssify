@@ -5,7 +5,6 @@ import requests
 from feedgen.feed import FeedGenerator
 from bs4 import BeautifulSoup
 from pytz import timezone
-from hashlib import sha1
 
 title = os.environ.get('TITLE')
 subtitle = os.environ.get('SUBTITLE')
@@ -20,6 +19,7 @@ item_description_selector = os.environ.get('ITEM_DESCRIPTION_CSS')
 item_date_selector = os.environ.get('ITEM_DATE_CSS')
 item_date_format = os.environ.get('ITEM_DATE_FORMAT')
 item_timezone = os.environ.get('ITEM_TIMEZONE')
+version = os.environ.get('VERSION')
 
 r = requests.get(url)
 soup = BeautifulSoup(r.text, 'lxml')
@@ -39,11 +39,10 @@ if item_date_selector:
     dates = soup.select(item_date_selector)
 
 fg = FeedGenerator()
-fg.id(url)
+fg.id(url + @ + version)
 fg.title(title)
-#fg.subtitle(subtitle)
 
-fg.link(href='https://tabhub.github.io/', rel='alternate')
+fg.link(href=url, rel='via')
 fg.language(language)
 fg.author({'name': author_name, 'email': author_email})
 
@@ -52,8 +51,6 @@ for i in range(len(titles)):
         break
 
     fe = fg.add_entry()
-    #payload = titles[i].text + subtitle
-    #fe.guid(sha1(payload.encode()).hexdigest())
     fe.title(titles[i].text)
     item_url = urljoin(url, urls[i].get('href'))
     fe.id(item_url)
