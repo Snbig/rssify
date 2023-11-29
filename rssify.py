@@ -44,7 +44,7 @@ if version_css:
 
 fg = FeedGenerator()
 if version:
-    fg.id(url + @ + version)
+    fg.id(url + "@" + version)
 else:
      fg.id(url)
 
