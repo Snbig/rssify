@@ -68,40 +68,36 @@ fg.link(href=url, rel='via')
 fg.language(language)
 fg.author({'name': author_name, 'email': author_email})
 
-for i in range(len(titles)):
-    if i > len(urls) - 1:
-        break
+fe = fg.add_entry()
+fe.title(titles.text)
+item_url = urljoin(url, urls.get('href'))
+if versions and versions:
+    fe.id(item_url + "@" + versions.text.strip())
+else:
+        fe.id(item_url)
 
-    fe = fg.add_entry()
-    fe.title(titles[i].text)
-    item_url = urljoin(url, urls[i].get('href'))
-    if versions and versions[i]:
-        fe.id(item_url + "@" + versions[i].text.strip())
-    else:
-         fe.id(item_url)
+fe.link(href=item_url, rel='alternate')
 
-    fe.link(href=item_url, rel='alternate')
+if descriptions and descriptions:
+    custom_decs = ""
+    custom_decs += f"{versions.text.strip()} \n" 
+    custom_decs += f"{ausers.text.strip()} نصب فعال\n"
+    custom_decs += f"{asizes.text.strip()} حجم \n" 
+    custom_decs += f"تاریخ آخرین  به‌روزرسانی {ldates.text.strip()} \n" 
 
-    if descriptions and descriptions[i]:
-        custom_decs = ""
-        custom_decs += f"{versions[i].text.strip()} \n" 
-        custom_decs += f"{ausers[i].text.strip()} نصب فعال\n"
-        custom_decs += f"{asizes[i].text.strip()} حجم \n" 
-        custom_decs += f"تاریخ آخرین  به‌روزرسانی {ldates[i].text.strip()} \n" 
+    fe.description(custom_decs)
 
-        fe.description(custom_decs)
+if authors and authors:
+    fe.author(name=authors.text)
 
-    if authors and authors[i]:
-        fe.author(name=authors[i].text)
+if dates and item_date_format:
+    date = datetime.strptime(dates.text.strip(), item_date_format)
+else:
+    date = datetime.utcnow()
 
-    if dates and item_date_format:
-        date = datetime.strptime(dates[i].text.strip(), item_date_format)
-    else:
-        date = datetime.utcnow()
-
-    localtz = timezone(item_timezone)
-    date = localtz.localize(date)
-    fe.published(date)
-    fe.updated(date)
+localtz = timezone(item_timezone)
+date = localtz.localize(date)
+fe.published(date)
+fe.updated(date)
 
 fg.atom_file(f'./feeds/{target}.xml')
