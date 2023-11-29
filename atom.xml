@@ -1,38 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><id>https://cafebazaar.ir/app/ir.tejaratbank.tata.mobile.android.tejarat</id><title>Fetch RSS</title><updated>2023-11-29T07:15:57.751938+00:00</updated><author><name>News room</name></author><link href="https://cafebazaar.ir/app/ir.tejaratbank.tata.mobile.android.tejarat" rel="via"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>bazaar://details?id=ir.tejaratbank.tata.mobile.android.tejarat@نسخهٔ ۴.۵.۹</id><title>همراه بانک تجارت</title><updated>2023-11-29T07:15:57.763952+03:30</updated><content>
-    نصب
-   
-      +۵ میلیون
-      
-    از ۱۷،۳۷۵ رأی
-   ۳.۴  
-    دسته‌بندی
-   
-      امور مالی
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><id>https://cafebazaar.ir/app/ir.tejaratbank.tata.mobile.android.tejarat</id><title>Fetch RSS</title><updated>2023-11-29T12:34:19.306623+00:00</updated><author><name>News room</name></author><link href="https://cafebazaar.ir/app/ir.tejaratbank.tata.mobile.android.tejarat" rel="via"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>bazaar://details?id=ir.tejaratbank.tata.mobile.android.tejarat@نسخهٔ ۴.۵.۹</id><title>همراه بانک تجارت</title><updated>2023-11-29T12:34:19.318564+03:30</updated><content>version: 
+      نسخهٔ ۴.۵.۹
      
-    حجم
-   
+users: 
+      +۵ میلیون
+     
+size: 
       ۲۲ مگابایت
      
-    آخرین بروزرسانی
-   
+date: 
       ۲۹ شهریور ۱۴۰۲
-    </content><link href="bazaar://details?id=ir.tejaratbank.tata.mobile.android.tejarat" rel="alternate"/><published>2023-11-29T07:15:57.763952+03:30</published></entry><entry><id>bazaar://details?id=ir.tejaratbank.tata.mobile.android.tejarat@نسخهٔ ۴.۵.۹</id><title>همراه بانک تجارت</title><updated>2023-11-29T07:15:57.752070+03:30</updated><content>
-    نصب
-   
-      +۵ میلیون
-      
-    از ۱۷،۳۷۵ رأی
-   ۳.۴  
-    دسته‌بندی
-   
-      امور مالی
      
-    حجم
-   
+</content><link href="bazaar://details?id=ir.tejaratbank.tata.mobile.android.tejarat" rel="alternate"/><published>2023-11-29T12:34:19.318564+03:30</published></entry><entry><id>bazaar://details?id=ir.tejaratbank.tata.mobile.android.tejarat@نسخهٔ ۴.۵.۹</id><title>همراه بانک تجارت</title><updated>2023-11-29T12:34:19.306744+03:30</updated><content>version: 
+      نسخهٔ ۴.۵.۹
+     
+users: 
+      +۵ میلیون
+     
+size: 
       ۲۲ مگابایت
      
-    آخرین بروزرسانی
-   
+date: 
       ۲۹ شهریور ۱۴۰۲
-    </content><link href="bazaar://details?id=ir.tejaratbank.tata.mobile.android.tejarat" rel="alternate"/><published>2023-11-29T07:15:57.752070+03:30</published></entry></feed>
+     
+</content><link href="bazaar://details?id=ir.tejaratbank.tata.mobile.android.tejarat" rel="alternate"/><published>2023-11-29T12:34:19.306744+03:30</published></entry></feed>
