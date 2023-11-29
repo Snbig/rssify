@@ -38,7 +38,7 @@ jobs:
         item-title-css: h1
         item-url-css: h1
         item-description-css: h1
-        last-version-css: div:nth-child(3) > div.q-item__section.column.q-item__section--main.justify-center.text-left.fa-number-bold
+        last-version-css: div > main > div > div:nth-child(6)
         active-users-css: tr:nth-child(3) > td.InfoCube__content.fs-14
         app-size-css: div:nth-child(5) > div.text-grey-7.fa-number-bold.size-5
         release-date-css: div:nth-child(9) > div.text-grey-7.fa-number-bold.size-5
