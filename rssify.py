@@ -41,7 +41,7 @@ if item_date_selector:
 fg = FeedGenerator()
 fg.id(url)
 fg.title(title)
-fg.subtitle(subtitle)
+#fg.subtitle(subtitle)
 
 fg.link(href='https://tabhub.github.io/', rel='alternate')
 fg.language(language)
@@ -52,8 +52,8 @@ for i in range(len(titles)):
         break
 
     fe = fg.add_entry()
-    payload = titles[i].text + subtitle
-    fe.guid(sha1(payload.encode()).hexdigest())
+    #payload = titles[i].text + subtitle
+    #fe.guid(sha1(payload.encode()).hexdigest())
     fe.title(titles[i].text)
     item_url = urljoin(url, urls[i].get('href'))
     fe.id(item_url)
