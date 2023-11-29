@@ -5,19 +5,20 @@ on:
     - cron: '*/10 * * * *'  # Run every 10 minutes
 
 jobs:
-  gene-rss:
+  gene-rss-bazaar:
     runs-on: ubuntu-latest
-    name: A job to test RSS generation
+    name: A job to test RSS generation for Cafebazaar
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-    - name: Test Rssify
+    - name: Fetch RSS
       uses: ./
       with:
-        title: Test Rssify
+        title: Fetch RSS
         url: https://cafebazaar.ir/app/ir.tejaratbank.tata.mobile.android.tejarat
         item-title-css: .AppName
         item-url-css: .AppInstallBtn
         item-description-css: .InfoCubes
+        subtitle: .AppSubtitles__item
         #item-date-css: .post-time
         #item-date-format: '%Y-%m-%d'

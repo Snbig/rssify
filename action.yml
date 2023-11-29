@@ -6,7 +6,8 @@ inputs:
     required: true
   subtitle:
     description: 'RSS subtitle/description'
-    required: false
+    required: true
+    default:  ''
   url:
     description: 'Website url'
     required: true
@@ -17,11 +18,11 @@ inputs:
   author-name:
     description: 'RSS author name'
     required: true
-    default: TabHub
+    default: News room
   author-email:
     description: 'RSS author email'
     required: true
-    default: 'idegorepl@gmail'
+    default: ''
   item-title-css:
     description: 'CSS selector to get item title'
     required: true
@@ -43,7 +44,7 @@ inputs:
   item-timezone:
     description: 'Timezone applied to item post date'
     required: false
-    default: 'Asia/Shanghai'
+    default: 'Asia/Tehran'
 runs:
   using: "composite"
   steps:
