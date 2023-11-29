@@ -38,16 +38,12 @@ dates = []
 if item_date_selector:
     dates = soup.select(item_date_selector)
 
-version = ''
+versions = []
 if version_css:
-    version = soup.select(version_css)
+    versions = soup.select(version_css)
 
 fg = FeedGenerator()
-if version:
-    fg.id(url + "@" + version)
-else:
-     fg.id(url)
-
+fg.id(url)
 fg.title(title)
 
 fg.link(href=url, rel='via')
@@ -61,7 +57,11 @@ for i in range(len(titles)):
     fe = fg.add_entry()
     fe.title(titles[i].text)
     item_url = urljoin(url, urls[i].get('href'))
-    fe.id(item_url)
+    if versions and versions[i]:
+        fe.id(item_url + "@" + versions[i].text)
+    else:
+         fe.id(item_url)
+
     fe.link(href=item_url, rel='alternate')
 
     if descriptions and descriptions[i]:
