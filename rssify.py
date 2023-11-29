@@ -28,7 +28,7 @@ asize_css = os.environ.get('ASIZE_CSS')
 
 r = requests.get(url)
 soup = BeautifulSoup(r.text, 'lxml')
-print(r.content)
+print(r.text)
 titles = soup.select_one(item_title_selector)
 urls = soup.select_one(item_url_selector)
 
