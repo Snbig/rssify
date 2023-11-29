@@ -15,10 +15,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-    - name: Fetch RSS
+    - name: Fetch Bazaar RSS
       uses: ./
       with:
-        title: Fetch RSS
+        title: Fetch Bazaar RSS
         url: https://cafebazaar.ir/app/ir.tejaratbank.tata.mobile.android.tejarat
         item-title-css: .AppName
         item-url-css: .AppInstallBtn
@@ -29,3 +29,22 @@ jobs:
         release-date-css: tr:nth-child(5) > td.InfoCube__content.fs-14
         #item-date-css: .post-time
         #item-date-format: '%Y-%m-%d'
+  
+  gene-rss-anardoni:
+    runs-on: ubuntu-latest
+    name: A job to test RSS generation for Anardoni
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Fetch Anardoni RSS
+      uses: ./
+      with:
+        title: Fetch Anardoni RSS
+        url: https://anardoni.com/ios/app/comadytejaratbank
+        item-title-css: .AppName
+        item-url-css: .AppInstallBtn
+        item-description-css: .InfoCubes
+        last-version-css: .AppSubtitles__item
+        active-users-css: tr:nth-child(3) > td.InfoCube__content.fs-14
+        app-size-css: div:nth-child(5) > div.text-grey-7.fa-number-bold.size-5
+        release-date-css: div:nth-child(9) > div.text-grey-7.fa-number-bold.size-5
