@@ -52,7 +52,8 @@ for i in range(len(titles)):
         break
 
     fe = fg.add_entry()
-    fe.guid(sha1(titles[i].text + subtitle))
+    payload = titles[i].text + subtitle
+    fe.guid(sha1(payload.encode()).hexdigest())
     fe.title(titles[i].text)
     item_url = urljoin(url, urls[i].get('href'))
     fe.id(item_url)
