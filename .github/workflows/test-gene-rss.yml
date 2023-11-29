@@ -23,6 +23,6 @@ jobs:
         item-title-css: .AppName
         item-url-css: .AppInstallBtn
         item-description-css: .InfoCubes
-        subtitle: .AppSubtitles__item
+        version-css: .AppSubtitles__item
         #item-date-css: .post-time
         #item-date-format: '%Y-%m-%d'
