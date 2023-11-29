@@ -58,7 +58,7 @@ for i in range(len(titles)):
     fe.title(titles[i].text)
     item_url = urljoin(url, urls[i].get('href'))
     if versions and versions[i]:
-        fe.id(item_url + "@" + versions[i].text)
+        fe.id(item_url + "@" + versions[i].text.strip())
     else:
          fe.id(item_url)
 
