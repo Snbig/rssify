@@ -45,6 +45,10 @@ inputs:
     description: 'Timezone applied to item post date'
     required: false
     default: 'Asia/Tehran'
+  version-css:
+    description: 'Application version'
+    default: ''
+    required: true
 runs:
   using: "composite"
   steps:
