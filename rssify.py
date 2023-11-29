@@ -104,4 +104,4 @@ for i in range(len(titles)):
     fe.published(date)
     fe.updated(date)
 
-fg.atom_file(f'{target}.xml')
+fg.atom_file(f'./feeds/{target}.xml')
