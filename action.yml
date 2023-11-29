@@ -11,6 +11,9 @@ inputs:
   url:
     description: 'Website url'
     required: true
+  target:
+    description: 'Target file'
+    required: true
   language:
     description: 'RSS language'
     required: true
@@ -77,6 +80,7 @@ runs:
        echo "TITLE=${{ inputs.title }}" >> $GITHUB_ENV
        echo "SUBTITLE=${{ inputs.subtitle }}" >> $GITHUB_ENV
        echo "URL=${{ inputs.url }}" >> $GITHUB_ENV
+       echo "TARGET=${{ inputs.target }}" >> $GITHUB_ENV
        echo "AUTHOR_NAME=${{ inputs.author-name }}" >> $GITHUB_ENV
        echo "AUTHOR_EMAIL=${{ inputs.author-email }}" >> $GITHUB_ENV
        echo "LANGUAGE=${{ inputs.language }}" >> $GITHUB_ENV

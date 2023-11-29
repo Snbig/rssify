@@ -9,6 +9,7 @@ from pytz import timezone
 title = os.environ.get('TITLE')
 subtitle = os.environ.get('SUBTITLE')
 url = os.environ.get('URL')
+target = os.environ.get('TARGET')
 author_name = os.environ.get('AUTHOR_NAME')
 author_email = os.environ.get('AUTHOR_EMAIL')
 language = os.environ.get('LANGUAGE')
@@ -103,4 +104,4 @@ for i in range(len(titles)):
     fe.published(date)
     fe.updated(date)
 
-fg.atom_file('atom.xml')
+fg.atom_file('f{target}.xml')

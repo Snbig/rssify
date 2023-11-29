@@ -20,6 +20,7 @@ jobs:
       with:
         title: Fetch Bazaar RSS
         url: https://cafebazaar.ir/app/ir.tejaratbank.tata.mobile.android.tejarat
+        target: bazaar
         item-title-css: .AppName
         item-url-css: .AppInstallBtn
         item-description-css: .InfoCubes
@@ -33,6 +34,7 @@ jobs:
       with:
         title: Fetch Anardoni RSS
         url: https://anardoni.com/ios/app/comadytejaratbank
+        target: anardoni
         item-title-css: .AppName
         item-url-css: .AppInstallBtn
         item-description-css: .InfoCubes
