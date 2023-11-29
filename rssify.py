@@ -83,10 +83,10 @@ for i in range(len(titles)):
 
     if descriptions and descriptions[i]:
         custom_decs = ""
-        custom_decs += f"version: {versions[i].text} \n" 
-        custom_decs += f"users: {ausers[i].text} \n"
-        custom_decs += f"size: {asizes[i].text} \n" 
-        custom_decs += f"date: {ldates[i].text} \n" 
+        custom_decs += f"{versions[i].text.strip()} \n" 
+        custom_decs += f"{ausers[i].text.strip()} نصب فعال\n"
+        custom_decs += f"{asizes[i].text.strip()} حجم \n" 
+        custom_decs += f"تاریخ آخرین  به‌روزرسانی {ldates[i].text.strip()} \n" 
 
         fe.description(custom_decs)
 
