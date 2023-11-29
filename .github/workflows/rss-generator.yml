@@ -27,15 +27,7 @@ jobs:
         active-users-css: tr:nth-child(1) > td.InfoCube__content.fs-14
         app-size-css: tr:nth-child(4) > td.InfoCube__content.fs-14
         release-date-css: tr:nth-child(5) > td.InfoCube__content.fs-14
-        #item-date-css: .post-time
-        #item-date-format: '%Y-%m-%d'
-  
-  gene-rss-anardoni:
-    runs-on: ubuntu-latest
-    name: A job to test RSS generation for Anardoni
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+
     - name: Fetch Anardoni RSS
       uses: ./
       with:
