@@ -1,8 +1,12 @@
 name: RSS generation
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'  # Run every 10 minutes
+  push:
+    branches:
+      - master
+#on:
+  #schedule:
+    #- cron: '*/5 * * * *'  # Run every 10 minutes
 
 jobs:
   gene-rss-bazaar:
