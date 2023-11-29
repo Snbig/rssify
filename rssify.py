@@ -28,7 +28,7 @@ asize_css = os.environ.get('ASIZE_CSS')
 
 r = requests.get(url)
 soup = BeautifulSoup(r.text, 'lxml')
-print(r.text)
+
 titles = soup.select_one(item_title_selector)
 urls = soup.select_one(item_url_selector)
 
@@ -72,13 +72,18 @@ fg.author({'name': author_name, 'email': author_email})
 fe = fg.add_entry()
 fe.title(titles.text)
 item_url = urljoin(url, urls.get('href'))
-fe.id(item_url + "@" + versions.text.strip())
+
+if target == 'anardoni':
+    versions = json.loads(versions.text)['softwareVersion']
+    fe.id(item_url + "@" + versions)
+else:
+    fe.id(item_url + "@" + versions.text.strip())
 
 fe.link(href=item_url, rel='alternate')
 
 if descriptions and descriptions:
     custom_decs = ""
-    custom_decs += f"{versions.text.strip()} \n" 
+    custom_decs += f"{versions if target == 'anardoni' else versions.text.strip()} \n" 
     custom_decs += f"{ausers.text.strip()} نصب فعال\n"
     custom_decs += f"{asizes.text.strip()} حجم \n" 
     custom_decs += f"تاریخ آخرین  به‌روزرسانی {ldates.text.strip()} \n" 
