@@ -39,7 +39,7 @@ if item_date_selector:
     dates = soup.select(item_date_selector)
 
 version = ''
-if version_css
+if version_css:
     version = soup.select(version_css)
 
 fg = FeedGenerator()
