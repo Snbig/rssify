@@ -25,7 +25,6 @@ r = requests.get(url)
 soup = BeautifulSoup(r.text, 'lxml')
 titles = soup.select(item_title_selector)
 urls = soup.select(item_url_selector)
-fg.subtitle(subtitle)
 
 descriptions = []
 if item_description_selector:
@@ -42,6 +41,7 @@ if item_date_selector:
 fg = FeedGenerator()
 fg.id(url)
 fg.title(title)
+fg.subtitle(subtitle)
 
 fg.link(href='https://tabhub.github.io/', rel='alternate')
 fg.language(language)
