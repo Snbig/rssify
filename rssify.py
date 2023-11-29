@@ -28,37 +28,37 @@ asize_css = os.environ.get('ASIZE_CSS')
 
 r = requests.get(url)
 soup = BeautifulSoup(r.text, 'lxml')
-titles = soup.select(item_title_selector)
-urls = soup.select(item_url_selector)
+titles = soup.select_one(item_title_selector)
+urls = soup.select_one(item_url_selector)
 
 desriptions = []
 if item_description_selector:
-    descriptions = soup.select(item_description_selector)
+    descriptions = soup.select_one(item_description_selector)
 
 authors = []
 if item_author_selector:
-    authors = soup.select(item_author_selector)
+    authors = soup.select_one(item_author_selector)
 
 dates = []
 if item_date_selector:
-    dates = soup.select(item_date_selector)
+    dates = soup.select_one(item_date_selector)
 
 versions = []
 if version_css:
-    versions = soup.select(version_css)
+    versions = soup.select_one(version_css)
 
 ausers = []
 if ausers_css:
-    ausers = soup.select(ausers_css)
+    ausers = soup.select_one(ausers_css)
 print(ausers)
 
 ldates = []
 if ldate_css:
-    ldates = soup.select(ldate_css)
+    ldates = soup.select_one(ldate_css)
 
 asizes = []
 if asize_css:
-    asizes = soup.select(asize_css)
+    asizes = soup.select_one(asize_css)
 
 fg = FeedGenerator()
 fg.id(url)
