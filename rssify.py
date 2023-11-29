@@ -20,13 +20,17 @@ item_date_selector = os.environ.get('ITEM_DATE_CSS')
 item_date_format = os.environ.get('ITEM_DATE_FORMAT')
 item_timezone = os.environ.get('ITEM_TIMEZONE')
 version_css = os.environ.get('VERSION_CSS')
+ausers_css = os.environ.get('AUSERS_CSS')
+ldate_css = os.environ.get('LDATE_CSS')
+asize_css = os.environ.get('ASIZE_CSS')
+
 
 r = requests.get(url)
 soup = BeautifulSoup(r.text, 'lxml')
 titles = soup.select(item_title_selector)
 urls = soup.select(item_url_selector)
 
-descriptions = []
+des riptions = []
 if item_description_selector:
     descriptions = soup.select(item_description_selector)
 
@@ -41,6 +45,18 @@ if item_date_selector:
 versions = []
 if version_css:
     versions = soup.select(version_css)
+
+ausers = []
+if ausers_css:
+    ausers = soup.select(ausers_css)
+
+ldates = []
+if ldate_css:
+    ldates = soup.select(ldate_css)
+
+asizes = []
+if asize_css:
+    asizes = soup.select(asize_css)
 
 fg = FeedGenerator()
 fg.id(url)
@@ -65,7 +81,13 @@ for i in range(len(titles)):
     fe.link(href=item_url, rel='alternate')
 
     if descriptions and descriptions[i]:
-        fe.description(descriptions[i].text)
+        custom_decs = ""
+        custom_decs += f"version: {versions[i].text} \n" 
+        custom_decs += f"users: {ausers[i].text} \n"
+        custom_decs += f"size: {asizes[i].text} \n" 
+        custom_decs += f"date: {ldates[i].text} \n" 
+
+        fe.description(custom_decs)
 
     if authors and authors[i]:
         fe.author(name=authors[i].text)

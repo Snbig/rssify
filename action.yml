@@ -6,7 +6,7 @@ inputs:
     required: true
   subtitle:
     description: 'RSS subtitle/description'
-    required: true
+    required: false
     default:  ''
   url:
     description: 'Website url'
@@ -45,10 +45,23 @@ inputs:
     description: 'Timezone applied to item post date'
     required: false
     default: 'Asia/Tehran'
-  version-css:
+  last-version-css:
     description: 'Application version'
     default: ''
     required: true
+  active-users-css:
+    description: 'Application active users'
+    default: ''
+    required: true
+  release-date-css:
+    description: 'Application last release date'
+    default: ''
+    required: true
+  app-size-css:
+    description: 'Application size'
+    default: ''
+    required: true
+
 runs:
   using: "composite"
   steps:
@@ -74,7 +87,11 @@ runs:
        echo "ITEM_DATE_CSS=${{ inputs.item-date-css }}" >> $GITHUB_ENV
        echo "ITEM_DATE_FORMAT=${{ inputs.item-date-format }}" >> $GITHUB_ENV
        echo "ITEM_TIMEZONE=${{ inputs.item-timezone }}" >> $GITHUB_ENV
-       echo "VERSION_CSS=${{ inputs.version-css }}" >> $GITHUB_ENV
+       echo "VERSION_CSS=${{ inputs.last-version-css }}" >> $GITHUB_ENV
+       echo "AUSERS_CSS=${{ inputs.active-users-css }}" >> $GITHUB_ENV
+       echo "LDATE_CSS=${{ inputs.release-date-css }}" >> $GITHUB_ENV
+       echo "ASIZE_CSS=${{ inputs.app-size-css }}" >> $GITHUB_ENV
+
       shell: bash
     - name: Generate RSS files
       run: python ${{ github.action_path }}/rssify.py
