@@ -71,10 +71,7 @@ fg.author({'name': author_name, 'email': author_email})
 fe = fg.add_entry()
 fe.title(titles.text)
 item_url = urljoin(url, urls.get('href'))
-if versions and versions:
-    fe.id(item_url + "@" + versions.text.strip())
-else:
-        fe.id(item_url)
+fe.id(item_url + "@" + versions.text.strip())
 
 fe.link(href=item_url, rel='alternate')
 
