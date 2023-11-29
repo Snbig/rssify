@@ -24,8 +24,8 @@ jobs:
         item-url-css: .AppInstallBtn
         item-description-css: .InfoCubes
         last-version-css: .AppSubtitles__item
-        active-users-css: .InfoCube__content:first-child
-        app-size-css: .InfoCube__content:nth-child(4)
-        release-date-css: .InfoCube__content:nth-child(5)
+        active-users-css: tr:nth-child(1) > td.InfoCube__content.fs-14
+        app-size-css: tr:nth-child(4) > td.InfoCube__content.fs-14
+        release-date-css: tr:nth-child(5) > td.InfoCube__content.fs-14
         #item-date-css: .post-time
         #item-date-format: '%Y-%m-%d'
