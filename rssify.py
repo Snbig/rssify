@@ -30,7 +30,7 @@ soup = BeautifulSoup(r.text, 'lxml')
 titles = soup.select(item_title_selector)
 urls = soup.select(item_url_selector)
 
-des riptions = []
+desriptions = []
 if item_description_selector:
     descriptions = soup.select(item_description_selector)
 
