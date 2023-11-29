@@ -5,6 +5,7 @@ import requests
 from feedgen.feed import FeedGenerator
 from bs4 import BeautifulSoup
 from pytz import timezone
+import json
 
 title = os.environ.get('TITLE')
 subtitle = os.environ.get('SUBTITLE')
