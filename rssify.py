@@ -19,7 +19,7 @@ item_description_selector = os.environ.get('ITEM_DESCRIPTION_CSS')
 item_date_selector = os.environ.get('ITEM_DATE_CSS')
 item_date_format = os.environ.get('ITEM_DATE_FORMAT')
 item_timezone = os.environ.get('ITEM_TIMEZONE')
-version = os.environ.get('VERSION')
+version_css = os.environ.get('VERSION_CSS')
 
 r = requests.get(url)
 soup = BeautifulSoup(r.text, 'lxml')
@@ -38,8 +38,16 @@ dates = []
 if item_date_selector:
     dates = soup.select(item_date_selector)
 
+version = ''
+if version_css
+    version = soup.select(version_css)
+
 fg = FeedGenerator()
-fg.id(url + @ + version)
+if version:
+    fg.id(url + @ + version)
+else:
+     fg.id(url)
+
 fg.title(title)
 
 fg.link(href=url, rel='via')
