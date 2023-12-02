@@ -54,5 +54,5 @@ jobs:
         item-description-css: h1
         last-version-css: table > tbody > tr:nth-child(1) > td:nth-child(2)
         active-users-css: table > tbody > tr:nth-child(3) > td:nth-child(2)
-        app-size-css: div: table > tbody > tr:nth-child(6) > td:nth-child(2)
+        app-size-css: table > tbody > tr:nth-child(6) > td:nth-child(2)
         release-date-css: table > tbody > tr:nth-child(2) > td:nth-child(2)
