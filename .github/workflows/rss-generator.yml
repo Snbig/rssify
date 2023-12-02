@@ -42,3 +42,17 @@ jobs:
         active-users-css: div:nth-child(3) > div.text-grey-7.fa-number-bold.size-5
         app-size-css: div:nth-child(5) > div.text-grey-7.fa-number-bold.size-5
         release-date-css: div:nth-child(9) > div.text-grey-7.fa-number-bold.size-5
+
+    - name: Fetch Myket RSS
+      uses: ./
+      with:
+        title: Fetch Myket RSS
+        url: https://myket.ir/app/ir.tejaratbank.tata.mobile.android.tejarat
+        target: myket
+        item-title-css: h1
+        item-url-css: head > link:nth-child(54)
+        item-description-css: h1
+        last-version-css: table > tbody > tr:nth-child(1) > td:nth-child(2)
+        active-users-css: table > tbody > tr:nth-child(3) > td:nth-child(2)
+        app-size-css: div: table > tbody > tr:nth-child(6) > td:nth-child(2)
+        release-date-css: table > tbody > tr:nth-child(2) > td:nth-child(2)
