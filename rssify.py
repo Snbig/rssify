@@ -33,34 +33,43 @@ soup = BeautifulSoup(r.text, 'lxml')
 titles = soup.select_one(item_title_selector)
 urls = soup.select_one(item_url_selector)
 
+print(titles)
+print(urls)
+
 desriptions = []
 if item_description_selector:
     descriptions = soup.select_one(item_description_selector)
+    print(descriptions)
 
 authors = []
 if item_author_selector:
     authors = soup.select_one(item_author_selector)
+    print(authors)
 
 dates = []
 if item_date_selector:
     dates = soup.select_one(item_date_selector)
+    print(dates)
 
 versions = []
 if version_css:
     versions = soup.select_one(version_css)
+    print(versions)
 
 ausers = []
 if ausers_css:
     ausers = soup.select_one(ausers_css)
-print(ausers)
+    print(ausers)
 
 ldates = []
 if ldate_css:
     ldates = soup.select_one(ldate_css)
+    print(ldates)
 
 asizes = []
 if asize_css:
     asizes = soup.select_one(asize_css)
+    print (asizes)
 
 fg = FeedGenerator()
 fg.id(url)
