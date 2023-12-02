@@ -50,7 +50,7 @@ jobs:
         url: https://myket.ir/app/ir.tejaratbank.tata.mobile.android.tejarat
         target: myket
         item-title-css: h1
-        item-url-css: head > link:nth-child(54)
+        item-url-css: install
         item-description-css: h1
         last-version-css: table > tbody > tr:nth-child(1) > td:nth-child(2)
         active-users-css: table > tbody > tr:nth-child(3) > td:nth-child(2)
