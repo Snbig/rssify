@@ -66,7 +66,7 @@ jobs:
         item-title-css: h1 > span
         item-url-css: \#downloadbox > div > ul > li > a
         item-description-css: h1
-        last-version-css: aside.sidebar.sidebar-single > ul > li:nth-child(3) > div'
+        last-version-css: aside.sidebar.sidebar-single > ul > li:nth-child(3) > div
         active-users-css: h1
         app-size-css: h1
         release-date-css: th1
