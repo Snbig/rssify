@@ -15,59 +15,59 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-    # 
-    # - name: Fetch Bazaar RSS
-    #   uses: ./
-    #   with:
-    #     title: Fetch Bazaar RSS
-    #     url: https://cafebazaar.ir/app/ir.tejaratbank.tata.mobile.android.tejarat
-    #     target: bazaar
-    #     item-title-css: .AppName
-    #     item-url-css: .AppInstallBtn
-    #     item-description-css: .InfoCubes
-    #     last-version-css: .AppSubtitles__item
-    #     active-users-css: tr:nth-child(1) > td.InfoCube__content.fs-14
-    #     app-size-css: tr:nth-child(4) > td.InfoCube__content.fs-14
-    #     release-date-css: tr:nth-child(5) > td.InfoCube__content.fs-14
-
-    # - name: Fetch Anardoni RSS
-    #   uses: ./
-    #   with:
-    #     title: Fetch Anardoni RSS
-    #     url: https://anardoni.com/ios/app/comadytejaratbank
-    #     target: anardoni
-    #     item-title-css: h1
-    #     item-url-css: h1
-    #     item-description-css: h1
-    #     last-version-css: head > script:nth-child(17)
-    #     active-users-css: div:nth-child(3) > div.text-grey-7.fa-number-bold.size-5
-    #     app-size-css: div:nth-child(5) > div.text-grey-7.fa-number-bold.size-5
-    #     release-date-css: div:nth-child(9) > div.text-grey-7.fa-number-bold.size-5
-
-    # - name: Fetch Myket RSS
-    #   uses: ./
-    #   with:
-    #     title: Fetch Myket RSS
-    #     url: https://myket.ir/app/ir.tejaratbank.tata.mobile.android.tejarat
-    #     target: myket
-    #     item-title-css: h1
-    #     item-url-css: h1
-    #     item-description-css: h1
-    #     last-version-css: tr:nth-child(1) > td:nth-child(2)
-    #     active-users-css: tr:nth-child(3) > td:nth-child(2)
-    #     app-size-css: tr:nth-child(6) > td:nth-child(2)
-    #     release-date-css: tr:nth-child(2) > td:nth-child(2)
-
-    - name: Fetch Farsroid RSS
+    
+    - name: Fetch Bazaar RSS
       uses: ./
       with:
-        title: Fetch Farsroid RSS
-        url: https://www.farsroid.com/tejarat-bank-android
-        target: farsroid
+        title: Fetch Bazaar RSS
+        url: https://cafebazaar.ir/app/ir.tejaratbank.tata.mobile.android.tejarat
+        target: bazaar
+        item-title-css: .AppName
+        item-url-css: .AppInstallBtn
+        item-description-css: .InfoCubes
+        last-version-css: .AppSubtitles__item
+        active-users-css: tr:nth-child(1) > td.InfoCube__content.fs-14
+        app-size-css: tr:nth-child(4) > td.InfoCube__content.fs-14
+        release-date-css: tr:nth-child(5) > td.InfoCube__content.fs-14
+
+    - name: Fetch Anardoni RSS
+      uses: ./
+      with:
+        title: Fetch Anardoni RSS
+        url: https://anardoni.com/ios/app/comadytejaratbank
+        target: anardoni
         item-title-css: h1
         item-url-css: h1
         item-description-css: h1
-        last-version-css: aside.sidebar.sidebar-single > ul > li:nth-child(3) > div
-        active-users-css: h1
-        app-size-css: h1
-        release-date-css: h1
+        last-version-css: head > script:nth-child(17)
+        active-users-css: div:nth-child(3) > div.text-grey-7.fa-number-bold.size-5
+        app-size-css: div:nth-child(5) > div.text-grey-7.fa-number-bold.size-5
+        release-date-css: div:nth-child(9) > div.text-grey-7.fa-number-bold.size-5
+
+    - name: Fetch Myket RSS
+      uses: ./
+      with:
+        title: Fetch Myket RSS
+        url: https://myket.ir/app/ir.tejaratbank.tata.mobile.android.tejarat
+        target: myket
+        item-title-css: h1
+        item-url-css: h1
+        item-description-css: h1
+        last-version-css: tr:nth-child(1) > td:nth-child(2)
+        active-users-css: tr:nth-child(3) > td:nth-child(2)
+        app-size-css: tr:nth-child(6) > td:nth-child(2)
+        release-date-css: tr:nth-child(2) > td:nth-child(2)
+
+    # - name: Fetch Farsroid RSS
+    #   uses: ./
+    #   with:
+    #     title: Fetch Farsroid RSS
+    #     url: https://www.farsroid.com/tejarat-bank-android
+    #     target: farsroid
+    #     item-title-css: h1
+    #     item-url-css: h1
+    #     item-description-css: h1
+    #     last-version-css: aside.sidebar.sidebar-single > ul > li:nth-child(3) > div
+    #     active-users-css: h1
+    #     app-size-css: h1
+    #     release-date-css: .post-metas-tabeld > tbody > tr:nth-child(1) > td:nth-child(2)
