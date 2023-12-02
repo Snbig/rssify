@@ -70,4 +70,4 @@ jobs:
         last-version-css: aside.sidebar.sidebar-single > ul > li:nth-child(3) > div
         active-users-css: h1
         app-size-css: h1
-        release-date-css: th1
+        release-date-css: h1
