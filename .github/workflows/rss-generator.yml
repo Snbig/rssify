@@ -58,6 +58,20 @@ jobs:
         app-size-css: tr:nth-child(6) > td:nth-child(2)
         release-date-css: tr:nth-child(2) > td:nth-child(2)
 
+    - name: Fetch Sibirani RSS
+      uses: ./
+      with:
+        title: Fetch Sibirani RSS
+        url: https://sibirani.com/apps/7T5pwqdNGg/
+        target: sibirani
+        item-title-css: h1
+        item-url-css: h1
+        item-description-css: .slogan
+        last-version-css: div.slder-new-section.mobile_scrin.app_intro_items > div > div > div:nth-child(7) > div.value > div
+        active-users-css: div.slder-new-section.mobile_scrin.app_intro_items > div > div > div:nth-child(5) > div.value > div
+        app-size-css: div.slder-new-section.mobile_scrin.app_intro_items > div > div > div:nth-child(2) > div.value > div
+        release-date-css: .date
+
     # - name: Fetch Farsroid RSS
     #   uses: ./
     #   with:
