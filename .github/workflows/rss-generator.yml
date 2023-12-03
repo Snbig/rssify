@@ -72,16 +72,7 @@ jobs:
         app-size-css: div.slder-new-section.mobile_scrin.app_intro_items > div > div > div:nth-child(5) > div.value > div
         release-date-css: .date
 
-    # - name: Fetch Farsroid RSS
-    #   uses: ./
-    #   with:
-    #     title: Fetch Farsroid RSS
-    #     url: https://www.farsroid.com/tejarat-bank-android
-    #     target: farsroid
-    #     item-title-css: h1
-    #     item-url-css: h1
-    #     item-description-css: h1
-    #     last-version-css: aside.sidebar.sidebar-single > ul > li:nth-child(3) > div
-    #     active-users-css: h1
-    #     app-size-css: h1
-    #     release-date-css: .post-metas-tabeld > tbody > tr:nth-child(1) > td:nth-child(2)
+    # - name: Fetch Sibbank RSS SPA
+    # - name: Fetch Iapps RSS SPA
+    # - name: Fetch Farsroid RSS Unofficial
+
