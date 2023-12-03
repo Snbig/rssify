@@ -68,8 +68,8 @@ jobs:
         item-url-css: h1
         item-description-css: .slogan
         last-version-css: div.slder-new-section.mobile_scrin.app_intro_items > div > div > div:nth-child(7) > div.value > div
-        active-users-css: div.slder-new-section.mobile_scrin.app_intro_items > div > div > div:nth-child(5) > div.value > div
-        app-size-css: div.slder-new-section.mobile_scrin.app_intro_items > div > div > div:nth-child(2) > div.value > div
+        active-users-css: div.slder-new-section.mobile_scrin.app_intro_items > div > div > div:nth-child(2) > div.value > div
+        app-size-css: div.slder-new-section.mobile_scrin.app_intro_items > div > div > div:nth-child(5) > div.value > div
         release-date-css: .date
 
     # - name: Fetch Farsroid RSS
