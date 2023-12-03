@@ -34,7 +34,7 @@ titles = soup.select_one(item_title_selector)
 urls = soup.select_one(item_url_selector)
 
 if target== 'charkhoneh':
-    char = json.dumps(titles.text, indent=2)
+    char = json.loads(titles.text, indent=2)
     print(char['softwareVersion'])
 
 desriptions = []
