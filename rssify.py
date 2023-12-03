@@ -35,7 +35,7 @@ urls = soup.select_one(item_url_selector)
 
 print(titles)
 if target== 'charkhoneh':
-    print(json.dumps(titles, indent=2))
+    print(json.dumps(titles.text, indent=2))
 
 print(urls)
 
