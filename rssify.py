@@ -35,7 +35,7 @@ urls = soup.select_one(item_url_selector)
 
 if target== 'charkhoneh':
     char = json.dumps(titles.text, indent=2)
-    print(json.loads(char))
+    print(json.loads(char)['@graph'][2]['softwareVersion'])
 
 desriptions = []
 if item_description_selector:
@@ -77,7 +77,7 @@ fe = fg.add_entry()
 fe.title(titles.text)
 item_url = urljoin(url, urls.get('href'))
 
-if target == 'anardoni' or target== 'charkhoneh':
+if target == 'anardoni':
     versions = json.loads(versions.text)['softwareVersion']
     fe.id(item_url + "@" + versions)
 else:
