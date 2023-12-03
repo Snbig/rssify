@@ -72,6 +72,20 @@ jobs:
         app-size-css: div.slder-new-section.mobile_scrin.app_intro_items > div > div > div:nth-child(5) > div.value > div
         release-date-css: .date
 
+    - name: Fetch Charkhoneh RSS
+      uses: ./
+      with:
+        title: Fetch Charkhoneh RSS
+        url: https://www.charkhoneh.com/content/930667751
+        target: charkhoneh
+        item-title-css: head > script
+        item-url-css: head > script
+        item-description-css: head > script
+        last-version-css: head > script
+        active-users-css: head > script
+        app-size-css: head > script
+        release-date-css: head > script
+
     # - name: Fetch Sibbank RSS SPA
     # - name: Fetch Iapps RSS SPA
     # - name: Fetch Farsroid RSS Unofficial

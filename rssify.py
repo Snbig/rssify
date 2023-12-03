@@ -34,6 +34,7 @@ titles = soup.select_one(item_title_selector)
 urls = soup.select_one(item_url_selector)
 
 print(titles)
+print(json.dumps(titles, indent=2))
 print(urls)
 
 desriptions = []
@@ -83,7 +84,7 @@ fe = fg.add_entry()
 fe.title(titles.text)
 item_url = urljoin(url, urls.get('href'))
 
-if target == 'anardoni':
+if target == 'anardoni' or target== 'charkhoneh':
     versions = json.loads(versions.text)['softwareVersion']
     fe.id(item_url + "@" + versions)
 else:
