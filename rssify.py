@@ -87,10 +87,10 @@ fe.link(href=item_url, rel='alternate')
 
 if descriptions and descriptions:
     custom_decs = ""
-    custom_decs += f"{versions if target == 'anardoni' else versions.text.strip()} \n" 
-    custom_decs += f"{ausers.text.strip()} نصب فعال\n"
-    custom_decs += f"{asizes.text.strip()} حجم \n" 
-    custom_decs += f"تاریخ آخرین  به‌روزرسانی {ldates.text.strip()} \n" 
+    custom_decs += f"{versions if target == 'anardoni' else versions.text.strip()} <br>" 
+    custom_decs += f"{ausers.text.strip()} نصب فعال <br>"
+    custom_decs += f"{asizes.text.strip()} حجم <br>" 
+    custom_decs += f"تاریخ آخرین  به‌روزرسانی {ldates.text.strip()} <br>" 
 
     fe.description(custom_decs)
 
